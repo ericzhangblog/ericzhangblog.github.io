@@ -10,6 +10,10 @@
 
     <!--Description-->
     
+        <meta name="description" content="Ubuntu19安装MySQL1、sudo apt-get update2、sudo apt-get install mysql-server2.1 安装完成后输入mysql -V查看版本
+
+3、配置MySQL3.1 配置初始化信息1.sudo mysql_secure_installation配置">
+    
 
     <!--Author-->
     
@@ -40,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2017/11 - Eric Blog</title>
+    <title>Eric Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,9 +131,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -137,79 +139,68 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2017/11</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2018/09/09/MySQL教程及资料/">
-        <span class="archive-date">
-            Sep 2018
-        </span>
-        MySQL知识及资料
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/07/23/MySQL教程及资料/Ubuntu19安装MySQL/">
+                我的第一篇博客
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-07-23</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Ubuntu19安装MySQL"><a href="#Ubuntu19安装MySQL" class="headerlink" title="Ubuntu19安装MySQL"></a>Ubuntu19安装MySQL</h1><h2 id="1、sudo-apt-get-update"><a href="#1、sudo-apt-get-update" class="headerlink" title="1、sudo apt-get update"></a>1、sudo apt-get update</h2><h2 id="2、sudo-apt-get-install-mysql-server"><a href="#2、sudo-apt-get-install-mysql-server" class="headerlink" title="2、sudo apt-get install mysql-server"></a>2、sudo apt-get install mysql-server</h2><pre><code>2.1 安装完成后输入mysql -V查看版本
+</code></pre><p><img src="./mysql.png" alt=""></p>
+<h2 id="3、配置MySQL"><a href="#3、配置MySQL" class="headerlink" title="3、配置MySQL"></a>3、配置MySQL</h2><h3 id="3-1-配置初始化信息"><a href="#3-1-配置初始化信息" class="headerlink" title="3.1 配置初始化信息"></a>3.1 配置初始化信息</h3><h3 id="1-sudo-mysql-secure-installation"><a href="#1-sudo-mysql-secure-installation" class="headerlink" title="1.sudo mysql_secure_installation"></a>1.sudo mysql_secure_installation</h3><pre><code>配置说明：
+</code></pre><p><img src="./1.png" alt=""><br><img src="./2.png" alt=""><br><img src="./3.png
+![](./4.png" alt=""><br><img src="./5.png" alt=""><br><img src="./6.png" alt=""></p>
+<h2 id="3-2-配置访问权限"><a href="#3-2-配置访问权限" class="headerlink" title="3.2 配置访问权限"></a>3.2 配置访问权限</h2><p>在Ubuntu下MySQL缺省是只允许本地访问的，使用Navicat等连接工具是连不上的；<br>如果你要其他机器也能够访问的话，需要进行配置；</p>
+<h5 id="3-2-1-配置远程访问"><a href="#3-2-1-配置远程访问" class="headerlink" title="3.2.1 配置远程访问"></a>3.2.1 配置远程访问</h5><pre><code>登陆mysql
+    sudo mysql -uroot -p
+执行下句话，表示授权
+    (1)mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;自己设置的密码&apos; WITH GRANT OPTION; 
+--&gt;   %:表示从任何主机连接到mysql服务器
+    (2)mysql&gt; FLUSH PRIVILEGES;
+</code></pre><h2 id="4-MySQL服务命令"><a href="#4-MySQL服务命令" class="headerlink" title="4 MySQL服务命令"></a>4 MySQL服务命令</h2><pre><code># 查看服务状态：
+sudo service mysql status
+# 停止
+sudo service mysql stop
+# 启动
+sudo service mysql star
+</code></pre>
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2017/11/21/Web开发/">
-        <span class="archive-date">
-            Nov 2017
-        </span>
-        Web开发
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/07/22/Redis教程及资料/">
-        <span class="archive-date">
-            Jul 2019
-        </span>
-        Redis教程及资料
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2017/10/08/firstblog/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        我的第一篇博客
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/05/19/python3教程及资料/">
-        <span class="archive-date">
-            May 2018
-        </span>
-        python3教程及资料
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/07/19/python面试题/">
-        <span class="archive-date">
-            Jul 2018
-        </span>
-        python面试题
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/07/23/MySQL教程及资料/Ubuntu19安装MySQL/">
-        <span class="archive-date">
-            Jul 2019
-        </span>
-        我的第一篇博客
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
